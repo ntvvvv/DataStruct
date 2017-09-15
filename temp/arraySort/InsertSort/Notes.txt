@@ -1,0 +1,6 @@
+1. 用了TDD方式来完成：首先写了main()及其中的调用的functions; 
+   在完成main()之后，再来补充定义空的 functions;最后直接编译运行。之后就是不断得重复修改->编译运行，真正完成小的需求。
+2. 测试了sizeof是在compilation时间段完成的这一个判断。
+  这样一来也解释了为什么 {int arr[50]; sizeof(arr)/sizeof(int)如果在同一个定义域的时候会得出来50；而定义的func(int arr[50]){sizeof(arr)/sizeof(int);}的以int arr[50]为parameter的时候，在func里使用的这个就只能得到1了}
+  这是因为在func的parameter的时候，编译并没有给它int[50]个空间，而实际只是给了一个 int*的空间给它。所以sizeof(arr)的大小就只是一个int*的大小。恰好，int*的大小和int的大小是一样的，因此结果是1.
+3. 在测试中经常会需要造一些原始的数据。在本例之中我造了50个大小的integer array。用的是一个free website来帮助造的。非常方便。
