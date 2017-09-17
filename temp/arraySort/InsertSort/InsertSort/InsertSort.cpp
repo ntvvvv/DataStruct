@@ -34,6 +34,11 @@ void dumpArray(int intAry[50], int sz)
 	}
 	return;
 }
+void verifySortingResult(int intAry[])
+{
+	cout << "verify Sorting result..." << endl;
+	return;
+}
 int _tmain(int argc, _TCHAR* argv[])
 {
 	int intArray[50] = {6098, 643, 7587, 4542, 708, //created with help of https://www.random.org/
@@ -54,6 +59,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	cout << "SIZE is " << SIZE << endl;
 	dumpArray(intArray, SIZE);
 	sortArray(intArray, SIZE);
+	verifySortingResult(intArray);
 	dumpArray(intArray, SIZE);
 	return 0;
 }
