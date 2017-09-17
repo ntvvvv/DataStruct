@@ -34,9 +34,18 @@ void dumpArray(int intAry[50], int sz)
 	}
 	return;
 }
-void verifySortingResult(int intAry[])
+void verifySortingResult(int intAry[], int sz)
 {
 	cout << "verify Sorting result..." << endl;
+	for(auto i = 1; i < sz; ++i) 
+	{
+		if (intAry[i] < intAry[i-1]) 
+		{
+			cerr << "not sorted!!!" << endl;
+			exit(0);
+		}
+	}
+	cout << "the array is petty sorted !!" << endl;
 	return;
 }
 int _tmain(int argc, _TCHAR* argv[])
@@ -59,7 +68,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	cout << "SIZE is " << SIZE << endl;
 	dumpArray(intArray, SIZE);
 	sortArray(intArray, SIZE);
-	verifySortingResult(intArray);
+	verifySortingResult(intArray, SIZE);
 	dumpArray(intArray, SIZE);
 	return 0;
 }
