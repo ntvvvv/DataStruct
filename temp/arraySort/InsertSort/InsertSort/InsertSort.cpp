@@ -50,6 +50,13 @@ void verifySortingResult(int intAry[], int sz)
 	cout << "the array is petty sorted !!" << endl;
 	return;
 }
+void Chapter1Ex2_1_1() 
+{
+	int A[] = {31, 41, 59, 26, 41, 58};
+	sortArray(A, sizeof(A)/sizeof(int));
+	dumpArray(A, sizeof(A)/sizeof(int));
+	return;
+}
 int _tmain(int argc, _TCHAR* argv[])
 {
 	int intArray[50] = {6098, 643, 7587, 4542, 708, //created with help of https://www.random.org/
@@ -72,6 +79,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	sortArray(intArray, SIZE);
 	verifySortingResult(intArray, SIZE);
 	dumpArray(intArray, SIZE);
+
+	//==MIT==
+	Chapter1Ex2_1_1();
 	return 0;
 }
 
