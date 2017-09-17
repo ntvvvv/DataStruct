@@ -17,6 +17,8 @@ void sortArray(int intAry[50], int sz)
 				intAry[j] = intAry[j-1];
 				intAry[j-1] = key;
 			}
+			else 
+				break;
 		}
 	}
 }
