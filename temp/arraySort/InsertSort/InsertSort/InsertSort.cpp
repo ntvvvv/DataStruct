@@ -7,6 +7,18 @@ using namespace std;
 void sortArray(int intAry[50], int sz)
 {
 	cout << "begin sorting array..." << endl;
+	for (auto i = 1; i < sz; ++i ) 
+	{
+		auto key = intAry[i];
+		for (auto j = i; j > 0; --j ) 
+		{
+			if (intAry[j - 1] > key ) 
+			{
+				intAry[j] = intAry[j-1];
+				intAry[j-1] = key;
+			}
+		}
+	}
 }
 
 //!!!NOTE sizeof(intAry)/sizeof(int) cannot be recognized by the compiler, 
